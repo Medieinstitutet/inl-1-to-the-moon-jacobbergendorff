@@ -266,6 +266,8 @@
 /* ----- MOBILE MENU ----- */
   .nav-index {
     text-transform: uppercase;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
   }
 /* ----- MOBILE ASTRONAUT ----- */
   .astronaut-index {
@@ -326,7 +328,10 @@
     font-family: 'Rubik', sans-serif;
     font-size: 15px;
     padding: 10%
-
+  }
+  .quote1-index {
+    font-style: italic;
+    padding: 10%;
   }
   /* ----- MOBILE SPACE ----- */
 
