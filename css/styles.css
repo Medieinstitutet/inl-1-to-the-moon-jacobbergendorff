@@ -2,10 +2,12 @@
   padding:0;
   margin:0;
 }
+/* ----------------------------------------------- */
 /* ---------- Specifications for Mobile ---------- */
 /* ----------------------------------------------- */
 
 /* ----- Background image: astronaut | Mobile ----- */
+/* ------------------------------------------------ */
   .astronaut {
     background-image: url("/images/astronaut.jpg");
     background-size: cover; 
@@ -53,6 +55,7 @@
     left: 13vw;
     position: absolute;
   }
+  /* ----- "TO THE MOON" | Box | Background image: astronaut | Mobile ----- */
   .astronaut .box .tothemoon-box {
     font-family: 'Rubik', sans-serif;
     font-size: 9vw;
@@ -65,6 +68,7 @@
     right: 15%;
     position: absolute;
   }
+  /* ----- "Read our story" | Box | Background image: astronaut | Mobile ----- */
   .astronaut .box .readourstory-box {
     font-family: 'Rubik', sans-serif;
     font-size: 2.7vw;
@@ -73,6 +77,7 @@
     left: 5%;  
     position: absolute;
   }
+  /* ----- Arrow | Box | Background image: astronaut | Mobile ----- */
   .astronaut .box .readourstory-box .arrow-readourstory-box {
     font-family: 'Fira Code', 'Rubik', sans-serif;
     font-size: 3.2vw;
@@ -82,17 +87,7 @@
     padding-top: 10;
     position: relative;
   }
-  .astronaut .verticalarrow {
-    color: whitesmoke;
-    font-family: 'Fira Code', 'Rubik', sans-serif;
-    font-weight: Retina;
-    font-size: 9vw;
-    left: 50%;
-    right: 50%;
-    bottom: 3%;
-    transform: rotate(90deg);
-    position: absolute; 
-  }
+  /* ----- Animation | Arrow | Box | Background image: astronaut | Mobile ----- */
   .readourstory-box:hover .arrow-readourstory-box {
     animation-direction: normal;
     animation-duration: 1.0s;
@@ -107,7 +102,21 @@
       left: 9%;
     }
   }
+  /* ----- Vertical arrow | Background image: astronaut | Mobile ----- */
+  .astronaut .verticalarrow {
+    color: whitesmoke;
+    font-family: 'Fira Code', 'Rubik', sans-serif;
+    font-weight: Retina;
+    font-size: 9vw;
+    left: 50%;
+    right: 50%;
+    bottom: 3%;
+    transform: rotate(90deg);
+    position: absolute; 
+  }
+
   /* ----- Background image: space | Mobile ----- */
+  /* -------------------------------------------- */
   .space {
     background-image: url("/images/space.jpg");
     background-size: cover;
@@ -234,6 +243,7 @@
     border: 1px solid red;
     position: relative;
   }
+  /* ----- Arrow | Link | Background image: space | Mobile ----- */
   .space .text .link-text .arrow-link-text {
     text-decoration: none;
     display: inline-block;
@@ -242,7 +252,7 @@
     font-family: 'Fira Code', 'Rubik', sans-serif;
     font-weight: Retina;
   }
-  /* ----- Animation | Link | Background image: space | Mobile ----- */
+  /* ----- Animation | Arrow | Link | Background image: space | Mobile ----- */
   .link-text:hover .arrow-link-text {
     animation-direction: normal;
     animation-duration: 1.0s;
@@ -261,21 +271,30 @@
   .space .cookies {/* -This is only displayed in desktop mode- */
     display: none;
   }
+  /* ----- Text | Cookies | Background image: space | Mobile ----- */
   .space .cookies .text-cookies {/* -This is only displayed in desktop mode- */
     display: none;
   }
+  /* ----- Button | Cookies | Background image: space | Mobile ----- */
   .space .cookies .accept-cookies {/* -This is only displayed in desktop mode- */
     display: none;
   }
-  
+
+  /* ------------------------------------------------------------------- */
   /* ---------- Specifications for Desktop / Landscape Tablet ---------- */
   /* ------------------------------------------------------------------- */
+
   @media screen and (min-width: 768px) {
-    /*----- Background image: astronaut + Box | Desktop / Landscape Tablet -----*/
+    /* ----- Background image: astronaut | Desktop / Landscape Tablet ----- */
+    /* -------------------------------------------------------------------- */
     .astronaut { 
       background-position: 50% 48%;
       background-repeat: no-repeat;
     } 
+    /* ----- Navigation | Background image: astronaut | Desktop / Landscape Tablet ----- */
+
+    
+    /* ----- Box | Background image: astronaut | Desktop / Landscape Tablet ----- */
     .astronaut .box {
       border: 5px solid black;
       padding-top: 30vw;
@@ -283,6 +302,7 @@
       top: 10vh;
       left: 7vw;
     }
+    /* ----- "TO THE MOON" | Box | Background image: astronaut | Desktop / Landscape Tablet ----- */
     .astronaut .box .tothemoon-box {
       font-size: 7vw;
       top: 18%;
@@ -290,31 +310,32 @@
       left: 6%;
       right: 6%;
     }
+    /* ----- "Read our story" | Box | Background image: astronaut | Desktop / Landscape Tablet ----- */
     .astronaut .box .readourstory-box {
       font-size: 1.2vw;
       bottom: 4%;   
       left: 62%;  
     }
+    /* ----- Arrow | Box | Background image: astronaut | Desktop / Landscape Tablet ----- */
     .astronaut .box .readourstory-box .arrow-readourstory-box {
       display: inline-block;
       font-size: 1.2vw;
       left: 3%;
     }
+    /* ----- Vertical arrow | Background image: astronaut | Desktop / Landscape Tablet ----- */
     .astronaut .verticalarrow {
       font-size: 7vw;
-    } 
-    .desktop-quote-text {
-      border: 1px solid red;
-      display: none;
     }
-  /*----- Navigation | Background image: astronaut | Desktop / Landscape Tablet ----- */
+
   /* ----- Background image: space | Desktop / Landscape Tablet ----- */
+  /* ---------------------------------------------------------------- */
+  
   /* ----- Logo | Background image: space | Desktop / Landscape Tablet ----- */
   /* ----- Heading | Background image: space | Desktop ----- */
   /* ----- Text (Section before quote)| Background image: space | Desktop / Landscape Tablet ----- */
   /* ----- Universal quote | Background image: space | Desktop / Landscape Tablet ----- */
-  /* ----- Text (Section after quote)| Background image: space | Desktop / Landscape Tablet ----- */
   /* ----- Desktop quote | Background image: space | Desktop / Landscape Tablet ----- */
+  /* ----- Text (Section after quote)| Background image: space | Desktop / Landscape Tablet ----- */
   /* ----- Major Tom | Background image: space | Desktop / Landscape Tablet ----- */
   /* ----- Link | Background image: space | Mobile / Landscape Tablet ----- */
   /* ----- Animation | Link | Background image: space | Mobile / Landscape Tablet ----- */
