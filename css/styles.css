@@ -1,342 +1,339 @@
-/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+*{
+  padding:0;
+  margin:0;
+}
+/* ---------- Specifications for Mobile ---------- */
+/* ----------------------------------------------- */
 
-/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-   html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-  }
-  
-  /*
-   * Remove text-shadow in selection highlight:
-   * https://twitter.com/miketaylr/status/12228805301
-   *
-   * Vendor-prefixed and regular ::selection selectors cannot be combined:
-   * https://stackoverflow.com/a/16982510/7133471
-   *
-   * Customize the background color to match your design.
-   */
-  
-  ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-  }
-  
-  ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-  }
-  
-  /*
-   * A better looking default horizontal rule
-   */
-  
-  hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-  }
-  
-  /*
-   * Remove the gap between audio, canvas, iframes,
-   * images, videos and the bottom of their containers:
-   * https://github.com/h5bp/html5-boilerplate/issues/440
-   */
-  
-  audio,
-  canvas,
-  iframe,
-  img,
-  svg,
-  video {
-    vertical-align: middle;
-  }
-  
-  /*
-   * Remove default fieldset styles.
-   */
-  
-  fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /*
-   * Allow only vertical resizing of textareas.
-   */
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  /* ==========================================================================
-     Author's custom styles
-     ========================================================================== */
-  
-  /* ==========================================================================
-     Helper classes
-     ========================================================================== */
-  
-  /*
-   * Hide visually and from screen readers
-   */
-  
-  .hidden,
-  [hidden] {
-    display: none !important;
-  }
-  
-  /*
-   * Hide only visually, but have it available for screen readers:
-   * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-   *
-   * 1. For long content, line feeds are not interpreted as spaces and small width
-   *    causes content to wrap 1 word per line:
-   *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
-   */
-  
-  .sr-only {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    /* 1 */
-  }
-  
-  /*
-   * Extends the .sr-only class to allow the element
-   * to be focusable when navigated to via the keyboard:
-   * https://www.drupal.org/node/897638
-   */
-  
-  .sr-only.focusable:active,
-  .sr-only.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    white-space: inherit;
-    width: auto;
-  }
-  
-  /*
-   * Hide visually and from screen readers, but maintain layout
-   */
-  
-  .invisible {
-    visibility: hidden;
-  }
-  
-  /*
-   * Clearfix: contain floats
-   *
-   * For modern browsers
-   * 1. The space content is one way to avoid an Opera bug when the
-   *    `contenteditable` attribute is included anywhere else in the document.
-   *    Otherwise it causes space to appear at the top and bottom of elements
-   *    that receive the `clearfix` class.
-   * 2. The use of `table` rather than `block` is only necessary if using
-   *    `:before` to contain the top-margins of child elements.
-   */
-  
-  .clearfix::before,
-  .clearfix::after {
-    content: " ";
-    display: table;
-  }
-  
-  .clearfix::after {
-    clear: both;
-  }
-  
-  /* ==========================================================================
-     EXAMPLE Media Queries for Responsive Design.
-     These examples override the primary ('mobile first') styles.
-     Modify as content requires.
-     ========================================================================== */
-  
-  @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-  }
-  
-  @media print,
-    (-webkit-min-device-pixel-ratio: 1.25),
-    (min-resolution: 1.25dppx),
-    (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-  }
-  
-  /* ==========================================================================
-     Print styles.
-     Inlined to avoid the additional HTTP request:
-     https://www.phpied.com/delay-loading-your-print-css/
-     ========================================================================== */
-  
-  @media print {
-    *,
-    *::before,
-    *::after {
-      background: #fff !important;
-      color: #000 !important;
-      /* Black prints faster */
-      box-shadow: none !important;
-      text-shadow: none !important;
-    }
-  
-    a,
-    a:visited {
-      text-decoration: underline;
-    }
-  
-    a[href]::after {
-      content: " (" attr(href) ")";
-    }
-  
-    abbr[title]::after {
-      content: " (" attr(title) ")";
-    }
-  
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-    a[href^="#"]::after,
-    a[href^="javascript:"]::after {
-      content: "";
-    }
-  
-    pre {
-      white-space: pre-wrap !important;
-    }
-  
-    pre,
-    blockquote {
-      border: 1px solid #999;
-      page-break-inside: avoid;
-    }
-  
-    /*
-     * Printing Tables:
-     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-    thead {
-      display: table-header-group;
-    }
-  
-    tr,
-    img {
-      page-break-inside: avoid;
-    }
-  
-    p,
-    h2,
-    h3 {
-      orphans: 3;
-      widows: 3;
-    }
-  
-    h2,
-    h3 {
-      page-break-after: avoid;
-    }
-  }
-  
-  
-/* ----- MOBILE ----- */
-/* ----- MOBILE MENU ----- */
-  .nav-index {
-    text-transform: uppercase;
-    text-align: center;
-    font-family: 'Rubik', sans-serif;
-  }
-/* ----- MOBILE ASTRONAUT ----- */
-  .astronaut-index {
-    background-image: url("/images/adam-miller-dBaz0xhCkPY-unsplash.jpg");
+/* ----- Background image: astronaut | Mobile ----- */
+  .astronaut {
+    background-image: url("/images/astronaut.jpg");
     background-size: cover; 
-    width: 348px;
-    height: 618px;
+    background-position: 50% 45%;
+    background-attachment: scroll;
+    min-height: 100vh;
   }
-  .box-index {
-    border: 4px solid black;
-    position: relative; 
-    top: 10%;
-    left: 10%;
-    height: 25%;
-    width: 40%;
-    background-color: rgba(255, 255, 255, 0.7); 
+/* ----- Navigation | Background image: astronaut | Mobile ----- */
+  .navigation {
+    border: 1px solid red;
+    position: absolute;
+    width: 100%
   }
-  .heading-box-index {
+  .navigation .button-navigation {
+    border: 1px solid red;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+  }
+  .navigation .checkbox-navigation {
+    border: 1px solid red;
+    display: none;
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    right: 20px;
+  }
+  .button-navigation .topline-button-navigation, .middleline-button-navigation, .bottomline-button-navigation {
+    position: relative;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+  /* ----- Box | Background image: astronaut | Mobile ----- */
+  .astronaut .box {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 3px solid black;
+    padding-top: 42vw; 
+    width: 38vw;
+    top: 9vh;
+    left: 13vw;
+    position: absolute;
+  }
+  .astronaut .box .tothemoon-box {
     font-family: 'Rubik', sans-serif;
-    font-size: 30px;
-    position: relative; 
-    top: 10%;
-    text-transform: uppercase;
-    font-weight: 700;
+    font-size: 9vw;
+    font-weight: 700;  
     text-align: center;
+    text-transform: uppercase;
+    top: 6%;
+    bottom: 20%;
+    left: 15%;
+    right: 15%;
+    position: absolute;
   }
-  .link-box-index {
-    font-size:  10px;
+  .astronaut .box .readourstory-box {
     font-family: 'Rubik', sans-serif;
-    font-weight: 400;
-    position: relative; 
-    top: 30%;
-    left: 5%;
-    text-align: left;
+    font-size: 2.7vw;
+    font-weight: 500;
+    bottom: 2.5%;   
+    left: 5%;  
+    position: absolute;
   }
-  /* ----- MOBILE SPACE ----- */
-  .space-index {
-    background-image: url("/images/raphael-nogueira-svbDI1Pq30s-unsplash.jpg");
+  .astronaut .box .readourstory-box .arrow-readourstory-box {
+    font-family: 'Fira Code', 'Rubik', sans-serif;
+    font-size: 3.2vw;
+    font-weight: Retina;
+    display: inline-block;
+    left: 3%;
+    padding-top: 10;
+    position: relative;
+  }
+  .astronaut .verticalarrow {
+    color: whitesmoke;
+    font-family: 'Fira Code', 'Rubik', sans-serif;
+    font-weight: Retina;
+    font-size: 9vw;
+    left: 50%;
+    right: 50%;
+    bottom: 3%;
+    transform: rotate(90deg);
+    position: absolute; 
+  }
+  .readourstory-box:hover .arrow-readourstory-box {
+    animation-direction: normal;
+    animation-duration: 1.0s;
+    animation-name: astronaut-arrow-slide-left;
+    animation-fill-mode: forwards;
+  }
+  @keyframes astronaut-arrow-slide-left {
+    from {
+      left: 3%;
+    }
+    to {
+      left: 9%;
+    }
+  }
+  /* ----- Background image: space | Mobile ----- */
+  .space {
+    background-image: url("/images/space.jpg");
     background-size: cover;
-  } 
-  .space-space-index {
-    color: white;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    min-height: 100vh;
+    position: absolute;
+    } 
+  /* ----- !Flexbox! | Background image: space | Mobile ----- */
+  .space .text {
+    display: flexbox;
+    border: 1px solid red;
+    color: whitesmoke;
+    margin-left: 10vw;
+    margin-right: 10vw;
     font-family: 'Rubik', sans-serif;
+    font-size: 2.36vw;
+    font-weight: 300;
+    line-height: 2vh;
   }
-  .ventures-space-index {
+  /* ----- Logo | Background image: space | Mobile ----- */  
+  .space .text .logo-text {
+    border: 1px solid red;
+    height: 10vh;
+    width: 70vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
+    position: relative;
+    z-index: 0;
+  }
+  .space .text .logo-text .space-logo-text {
+    border: 1px solid red;
+    font-family: 'Rubik', sans-serif;
+    font-size: 12vw;
+    font-weight: bold;
     color: white;
+    margin-left: 2vw;
+    position: relative;
+    z-index: 2;
+  }
+  .space .text .logo-text .ventures-logo-text {
+    border: 1px solid red;
     font-family: 'Times New Roman', Times, serif;
-    text-transform: bold;
+    font-size: 16vw;
+    font-weight: bold;
+    color: gray;
+    position: relative;
+    margin-left: 13vw;
+    z-index: 1;
   }
-  .text-space-index {
+  /* ----- Heading | Background image: space | Mobile ----- */
+  .space .text .heading-text {
+    border: 1px solid red;
+    font-size: 4.8vw;
+    position: relative;
+    margin-top: 4vh;
+  }
+  /* ----- Text (Section before quote) | Background image: space | Mobile ----- */
+  .space .text .p1-text {
+    border: 1px solid red;
     color: white;
-    font-family: 'Rubik', sans-serif;
-    font-size: 10px;
-    padding: 10%
+    margin-top: 2vh;
+    position: relative;
   }
-  .intro-space-index {
-    color: white;
-    font-family: 'Rubik', sans-serif;
-    font-size: 15px;
-    padding: 10%
+  .space .text .p2-text {
+    border: 1px solid red;
+    position: relative;
+    margin-top: 1vh;
   }
-  .quote1-index {
+  /* ----- Universal quote | Background image: space | Mobile ----- */
+  .space .text .quote-text {
+    border: 1px solid red;
     font-style: italic;
-    padding: 10%;
+    font-size: 3.8vw;
+    font-weight: lighter;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    margin-left: 6vw;
+    margin-right: 2vw;
+    quotes: auto;
   }
-  /* ----- MOBILE SPACE ----- */
+  /* ----- Quotation marks | Universal quote | Background image: space | Mobile ----- */
+  .quote-text::before {
+    content: open-quote;
+  }
+  .quote-text::after {
+    content: close-quote;
+  }
+  /* ----- Desktop quote | Background image: space | Mobile ----- */
+  .desktop-quote-text { /* -This quote is only displayed in desktop mode- */
+    display: none;
+  }
+  /* ----- Text (Section after quote) | Background image: space | Mobile ----- */
+  .space .text .p3-text {
+    border: 1px solid red;
+    margin-top: 0.5vh;
+    position: relative;
+  }
+  .space .text .p4-text {
+    border: 1px solid red;
+    margin-top: 0.5vh;
+    position: relative;
+  }
+  .space .text .p5-text {
+    border: 1px solid red;
+    margin-top: 0.5vh;
+    position: relative;
+  }
+  .space .text .p6-text {
+    border: 1px solid red;
+    position: relative;
+    margin-top: 0.5vh;
+  }
+  .space .text .p7-text {
+    border: 1px solid red;
+    margin-top: 0.5vh;
+    position: relative;
+  }
+  /* ----- Link | Background image: space | Mobile ----- */
+  .space .text .link-text {
+    color: rgb(255, 17, 227);
+    text-decoration: underline;
+    margin-top: 0.5vh;
+    border: 1px solid red;
+    position: relative;
+  }
+  .space .text .link-text .arrow-link-text {
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 0.5%;
+    position: relative;
+    font-family: 'Fira Code', 'Rubik', sans-serif;
+    font-weight: Retina;
+  }
+  /* ----- Animation | Link | Background image: space | Mobile ----- */
+  .link-text:hover .arrow-link-text {
+    animation-direction: normal;
+    animation-duration: 1.0s;
+    animation-name: space-arrow-slide-left;
+    animation-fill-mode: forwards;
+  }
+  @keyframes space-arrow-slide-left {
+    from {
+      margin-left: 0.5%;
+    }
+    to {
+      margin-left: 3.0%;
+    }
+  }
+  /* ----- Cookies | Background image: space | Mobile ----- */
+  .space .cookies {/* -This is only displayed in desktop mode- */
+    display: none;
+  }
+  .space .cookies .text-cookies {/* -This is only displayed in desktop mode- */
+    display: none;
+  }
+  .space .cookies .accept-cookies {/* -This is only displayed in desktop mode- */
+    display: none;
+  }
+  
+  /* ---------- Specifications for Desktop / Landscape Tablet ---------- */
+  /* ------------------------------------------------------------------- */
+  @media screen and (min-width: 768px) {
+    /*----- Background image: astronaut + Box | Desktop / Landscape Tablet -----*/
+    .astronaut { 
+      background-position: 50% 48%;
+      background-repeat: no-repeat;
+    } 
+    .astronaut .box {
+      border: 5px solid black;
+      padding-top: 30vw;
+      width: 30vw;
+      top: 10vh;
+      left: 7vw;
+    }
+    .astronaut .box .tothemoon-box {
+      font-size: 7vw;
+      top: 18%;
+      bottom: 28%;
+      left: 6%;
+      right: 6%;
+    }
+    .astronaut .box .readourstory-box {
+      font-size: 1.2vw;
+      bottom: 4%;   
+      left: 62%;  
+    }
+    .astronaut .box .readourstory-box .arrow-readourstory-box {
+      display: inline-block;
+      font-size: 1.2vw;
+      left: 3%;
+    }
+    .astronaut .verticalarrow {
+      font-size: 7vw;
+    } 
+    .desktop-quote-text {
+      border: 1px solid red;
+      display: none;
+    }
+  /*----- Navigation | Background image: astronaut | Desktop / Landscape Tablet ----- */
+  /* ----- Background image: space | Desktop / Landscape Tablet ----- */
+  /* ----- Logo | Background image: space | Desktop / Landscape Tablet ----- */
+  /* ----- Heading | Background image: space | Desktop ----- */
+  /* ----- Text (Section before quote)| Background image: space | Desktop / Landscape Tablet ----- */
+  /* ----- Universal quote | Background image: space | Desktop / Landscape Tablet ----- */
+  /* ----- Text (Section after quote)| Background image: space | Desktop / Landscape Tablet ----- */
+  /* ----- Desktop quote | Background image: space | Desktop / Landscape Tablet ----- */
+  /* ----- Major Tom | Background image: space | Desktop / Landscape Tablet ----- */
+  /* ----- Link | Background image: space | Mobile / Landscape Tablet ----- */
+  /* ----- Animation | Link | Background image: space | Mobile / Landscape Tablet ----- */
+  /* ----- Cookies | Background image: space | Desktop / Landscape Tablet ----- */
+  }
 
-  /* ----- DESKTOP ----- */
-  /* ----- DESKTOP ASTRONAUT ----- */
-  /* ----- DESKTOP MENU ----- */
-  /* ----- DESKTOP SPACE ----- */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
