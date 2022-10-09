@@ -15,7 +15,7 @@
     background-attachment: scroll;
     min-height: 100vh;
   }
-/* ----- Navigation | Background image: astronaut | Mobile ----- */
+  /* ----- Navigation | Background image: astronaut | Mobile ----- */
   .navigation {
     border: 1px solid red;
     position: absolute;
@@ -118,16 +118,17 @@
   /* ----- Background image: space | Mobile ----- */
   /* -------------------------------------------- */
   .space {
-    background-image: url("/images/space.jpg");
+    background-image: url("/images/mobile-space.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
     min-height: 100vh;
     position: absolute;
     } 
-  /* ----- !Flexbox! | Background image: space | Mobile ----- */
-  .space .text {
-    display: flexbox;
+  /* ----- Flexbox | Background image: space | Mobile ----- */
+  .space .text { /*- The article element serves as the centered flexbox in mobile mobile -*/
+    display: flex;
+    flex-direction: column;
     border: 1px solid red;
     color: whitesmoke;
     margin-left: 10vw;
@@ -283,7 +284,6 @@
   /* ------------------------------------------------------------------- */
   /* ---------- Specifications for Desktop / Landscape Tablet ---------- */
   /* ------------------------------------------------------------------- */
-
   @media screen and (min-width: 768px) {
     /* ----- Background image: astronaut | Desktop / Landscape Tablet ----- */
     /* -------------------------------------------------------------------- */
@@ -327,28 +327,291 @@
       font-size: 7vw;
     }
 
-  /* ----- Background image: space | Desktop / Landscape Tablet ----- */
-  /* ---------------------------------------------------------------- */
-  
-  /* ----- Logo | Background image: space | Desktop / Landscape Tablet ----- */
-  /* ----- Heading | Background image: space | Desktop ----- */
-  /* ----- Text (Section before quote)| Background image: space | Desktop / Landscape Tablet ----- */
-  /* ----- Universal quote | Background image: space | Desktop / Landscape Tablet ----- */
-  /* ----- Desktop quote | Background image: space | Desktop / Landscape Tablet ----- */
-  /* ----- Text (Section after quote)| Background image: space | Desktop / Landscape Tablet ----- */
-  /* ----- Major Tom | Background image: space | Desktop / Landscape Tablet ----- */
-  /* ----- Link | Background image: space | Mobile / Landscape Tablet ----- */
-  /* ----- Animation | Link | Background image: space | Mobile / Landscape Tablet ----- */
-  /* ----- Cookies | Background image: space | Desktop / Landscape Tablet ----- */
+    /* ----- Background image: space | Desktop / Landscape Tablet ----- */
+    /* ---------------------------------------------------------------- */
+    .space {
+      background-image: url("/images/desktop-space.jpg"); 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      position: absolute;
+      min-height: 100vh;
+      min-width: 100vw;
+    } 
+    /* ----- Flexbox containing Flexbox Left and Flexbox Right | Background image: space | Desktop / Landscape Tablet ----- */
+    .space .text {
+      display: flex;
+      flex-direction: row;
+      border: 1px solid red;
+      color: whitesmoke;
+      height: 80vh;
+      width: 90.09vw;
+      margin-top: 9.09vh;
+      margin-left: 4.45vw;
+      margin-right: 4vw;
+      font-family: 'Rubik', sans-serif;
+    }
+    /* ----- Flexbox Left | Background image: space | Desktop / Landscape Tablet ----- */
+    .space .flexboxleft { 
+      display: flex;
+      flex-direction: column;
+      float: right;
+      order: 1;
+      width: 36.36vw;
+      margin-right: 18.18vw;
+      height: 100%; 
+      border: 2px solid blueviolet;
+      position: relative;
+    }
+    /* ----- Flexbox Right | Background image: space | Desktop / Landscape Tablet ----- */
+    .space .flexboxright {
+      display: flex;
+      flex-direction: column;
+      float: right;
+      width: 36.36vw;
+      height: 100%;
+      position: relative;
+      order: 2;
+      border: 2px solid green;
+    }
+    .space .text .flexboxleft .logo-text {
+      border: 1px solid red;
+      z-index: 0;
+      margin-top: 0vh;
+      height: 20vh;
+      width: 100%;
+      position: relative;
+      z-index: 0;
+    }
+    .space .text .flexboxleft .logo-text .space-logo-text {
+      border: 1px solid red;
+      font-size: 6.8vw;
+      margin-left: 0%
+    }
+    .space .text .flexboxleft .logo-text .ventures-logo-text {
+      border: 1px solid red;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 9vw;
+      margin-left: 0%;
+      top: 1.5vw;
+    }
+    /* --
+  .space .text .logo-text .space-logo-text {
+    border: 1px solid red;
+    font-family: 'Rubik', sans-serif;
+    font-size: 12vw;
+    font-weight: bold;
+    color: white;
+    margin-left: 2vw;
+    position: relative;
+    z-index: 2;
   }
+  .space .text .logo-text .ventures-logo-text {
+    border: 1px solid red;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16vw;
+    font-weight: bold;
+    color: gray;
+    position: relative;
+    margin-left: 13vw;
+    z-index: 1;
+    --*/
 
+    /* ----- Heading | Background image: space | Desktop / Landscape Tablet ----- */
+    .space .text .flexboxleft .heading-text {
+      border: 1px solid red;
+      font-size: 2vw;
+      margin-top: 4vh;
+    }
+    /* ----- Text (Section before quote) | Background image: space | Desktop / Landscape Tablet ----- */
+    .space .text .flexboxleft .p1-text {
+      border: 1px solid red;
+      margin-top: 1vh;
+      line-height: 2.5vh;
+      font-size: 1.1vw
+    }
+    .space .text .flexboxleft .p2-text {
+      border: 1px solid red;
+      line-height: 2.5vh;
+      margin-top: 1vh;
+      font-size: 1.1vw
+    }
+    /* ----- Universal quote | Background image: space | Desktop / Landscape Tablet ----- */
+    .space .text .flexboxleft .quote-text {
+      border: 1px solid red;
+      font-style: italic;
+      font-size: 1.7vw;
+      line-height: 3vh;
+      font-weight: lighter;
+      height: 10vh;
+      margin-top: 6vh;
+      margin-bottom: 12vh;
+      margin-left: 3vw;
+      margin-right: 2vw;
+      quotes: auto;
+    }
+    /* ----- Quotation marks | Universal quote | Background image: space | Desktop / Landscape Tablet ----- */
+    .quote-text::before {
+      content: open-quote;
+    }
+    .quote-text::after {
+      content: close-quote;
+    }
+    /*--
+  .space .text .p1-text {
+    border: 1px solid red;
+    color: white;
+    margin-top: 2vh;
+    position: relative;
+  }
+  .space .text .p2-text {
+    border: 1px solid red;
+    position: relative;
+    margin-top: 1vh;
+  }
+  .space .text .quote-text {
+    border: 1px solid red;
+    font-style: italic;
+    font-size: 3.8vw;
+    font-weight: lighter;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    margin-left: 6vw;
+    margin-right: 2vw;
+    quotes: auto;
+  }
+  .quote-text::before {
+    content: open-quote;
+  }
+  .quote-text::after {
+    content: close-quote;
+  }
+    --*/
 
+    /* ----- Desktop quote | Background image: space | Desktop / Landscape Tablet ----- */
+    .space .text .flexboxright .desktop-quote-text { /* -This quote is only displayed in desktop mode- */
+      font-style: italic;
+      font-size: 2.4vw;
+      font-weight: 400;
+      border: 1px solid red;
+      display: block;
+      width: 23vw;
+      margin-top: 7.0vh;
+      margin-bottom: 7.0vh;
+      position: relative;
+      line-height: 4.4vh;
+      opacity: 99%;
+      background: -webkit-repeating-linear-gradient(95deg, rgb(121, 45, 97), rgb(121, 105, 113)
+      69%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    /* ----- Text (Section after quote) | Background image: space | Desktop / Landscape Tablet ----- */
+    .space .text .flexboxright .p3-text {
+      border: 1px solid red;
+      font-size: 1.1vw;
+      line-height: 2.5vh;
+      position: relative;
+    }
+    .space .text .flexboxright .p4-text {
+      border: 1px solid red;
+      font-size: 1.1vw;
+      line-height: 2.5vh;
+      position: relative;
+    }
+    .space .text .flexboxright .p5-text {
+      border: 1px solid red;
+      font-size: 1.1vw;
+      margin-top: 0vh;
+      position: relative;
+    }
+    .space .text .flexboxright .p6-text {
+      border: 1px solid red;
+      font-size: 1.1vw;
+      margin-top: 0vh;
+      position: relative;
+    }
+    .space .text .flexboxright .p7-text {
+      border: 1px solid red;
+      font-size: 1.1vw;
+      margin-top: 0vh;
+      position: relative;
+    }
+    /* ----- Link | Background image: space | Desktop / Landscape Tablet ----- */
+    .space .text .flexboxright .link-text {
+      color: rgb(206, 50, 188);
+      text-decoration: underline;
+      font-size: 1.1vw;
+      margin-top: 0.0vh;
+      border: 1px solid red;
+      position: relative;
+    }
+    /* ----- Arrow | Link | Background image: space | Desktop / Landscape Tablet ----- */
+    .space .text .flexboxright .link-text .arrow-link-text {
+      text-decoration: none;
+      display: inline-block;
+      margin-left: 0.5%;
+      position: relative;
+      font-family: 'Fira Code', 'Rubik', sans-serif;
+      font-weight: Retina;
+    }
+    /* ----- Animation | Arrow | Link | Background image: space | Desktop / Landscape Tablet ----- */
+    .link-text:hover .arrow-link-text {
+      animation-direction: normal;
+      animation-duration: 1.0s;
+      animation-name: space-arrow-slide-left;
+      animation-fill-mode: forwards;
+    }
+    @keyframes space-arrow-slide-left {
+      from {
+        margin-left: 0.5%;
+      }
+      to {
+        margin-left: 3.0%;
+      }
+    }
+    /* ----- Cookies | Background image: space | Desktop / Landscape Tablet ----- */
+    .space .bar-cookies {/* -This is only displayed in desktop mode- */
+      width: 100vw;
+      background-color: rgb(21, 21, 80);
+      height: 9%;
+      bottom: 0%;
+      right: 0%; 
+      left: 0%;
+      border: 1px solid red;
+      position: fixed;
+      display: block;
+    }
+    /* ----- Text | Cookies | Background image: space | Desktop / Landscape Tablet ----- */
+    .bar-cookies .message-cookies {/* -This is only displayed in desktop mode- */
+      font-family: 'Rubik', sans-serif;
+      left: 3%;
+      top: 40%;
+      border: 1px solid red;
+      position: relative;
+      color: white;
+      display: inline-block;
+    }
+    /* ----- Button | Cookies | Background image: space | Desktop / Landscape Tablet ----- */
+    #checkbox-cookies {/* -This is only displayed in desktop mode- */
+      display: none;
+    }
+    .bar-cookies .close-cookies {/* -This is only displayed in desktop mode- */
+      top: 40%;
+      left: 43%;
+      right: 10%;
+      height: 30%;
+      width: 15%;
+      border: 1px solid red;
+      position: relative;
+      color: white;
+      font-family: 'Rubik', sans-serif;
+      display: inline-block;
+      text-transform: uppercase;
+      background-color: blue;
 
-
-
-
-
-
+    }
+  }
 
 
 
