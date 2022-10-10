@@ -129,75 +129,68 @@
   .space .text { /*- The article element serves as the centered flexbox in mobile mobile -*/
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
     color: whitesmoke;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-top: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
     font-family: 'Rubik', sans-serif;
-    font-size: 2.36vw;
+    font-size: 2.35vw;
     font-weight: 300;
-    line-height: 2vh;
-  }
+    line-height: clamp(0.8rem, 1.2rem, 1.8rem);
+  } /*-- 2.36 --*/
   /* ----- Logo | Background image: space | Mobile ----- */  
-  .space .text .logo-text {
-    border: 1px solid red;
-    height: 10vh;
-    width: 70vw;
-    margin-right: 10vw;
-    margin-top: 10vh;
+  .text .logo-text {
+    height: 10%;
+    width: 10%;
     position: relative;
     z-index: 0;
   }
-  .space .text .logo-text .space-logo-text {
-    border: 1px solid red;
+  .logo-text .space-logo-text {
     font-family: 'Rubik', sans-serif;
-    font-size: 12vw;
+    font-size: 14vw;
     font-weight: bold;
     color: white;
-    margin-left: 2vw;
+    left: 2%;
     position: relative;
     z-index: 2;
   }
-  .space .text .logo-text .ventures-logo-text {
-    border: 1px solid red;
+  .logo-text .ventures-logo-text {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 16vw;
+    font-size: 18vw;
+    left: 20%;
     font-weight: bold;
     color: gray;
     position: relative;
-    margin-left: 13vw;
     z-index: 1;
+    left: 20%
   }
   /* ----- Heading | Background image: space | Mobile ----- */
-  .space .text .heading-text {
-    border: 1px solid red;
-    font-size: 4.8vw;
+  .text .heading-text {
+    font-size: 5vw;
     position: relative;
-    margin-top: 4vh;
+    margin-top: 15%;
   }
   /* ----- Text (Section before quote) | Background image: space | Mobile ----- */
-  .space .text .p1-text {
-    border: 1px solid red;
-    color: white;
-    margin-top: 2vh;
+  .text .p1-text {
+    margin-top: 2%;
     position: relative;
   }
-  .space .text .p2-text {
-    border: 1px solid red;
+  .text .p2-text {
     position: relative;
-    margin-top: 1vh;
+    margin-top: 2%;
   }
   /* ----- Universal quote | Background image: space | Mobile ----- */
-  .space .text .quote-text {
-    border: 1px solid red;
+  .text .quote-text {
     font-style: italic;
     font-size: 3.8vw;
     font-weight: lighter;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
+    margin-top: 5%;
+    margin-bottom: 5%;
     margin-left: 6vw;
     margin-right: 2vw;
     quotes: auto;
+    line-height: clamp(1.2rem, 1.4rem, 1.6rem);
+
   }
   /* ----- Quotation marks | Universal quote | Background image: space | Mobile ----- */
   .quote-text::before {
@@ -212,27 +205,25 @@
   }
   /* ----- Text (Section after quote) | Background image: space | Mobile ----- */
   .space .text .p3-text {
-    border: 1px solid red;
     margin-top: 0.5vh;
     position: relative;
   }
   .space .text .p4-text {
-    border: 1px solid red;
     margin-top: 0.5vh;
     position: relative;
   }
+  .major-tom {
+    display: none;
+  }
   .space .text .p5-text {
-    border: 1px solid red;
     margin-top: 0.5vh;
     position: relative;
   }
   .space .text .p6-text {
-    border: 1px solid red;
     position: relative;
     margin-top: 0.5vh;
   }
   .space .text .p7-text {
-    border: 1px solid red;
     margin-top: 0.5vh;
     position: relative;
   }
@@ -241,7 +232,6 @@
     color: rgb(255, 17, 227);
     text-decoration: underline;
     margin-top: 0.5vh;
-    border: 1px solid red;
     position: relative;
   }
   /* ----- Arrow | Link | Background image: space | Mobile ----- */
@@ -269,27 +259,21 @@
     }
   }
   /* ----- Cookies | Background image: space | Mobile ----- */
-  .space .cookies {/* -This is only displayed in desktop mode- */
-    display: none;
-  }
-  /* ----- Text | Cookies | Background image: space | Mobile ----- */
-  .space .cookies .text-cookies {/* -This is only displayed in desktop mode- */
-    display: none;
-  }
-  /* ----- Button | Cookies | Background image: space | Mobile ----- */
-  .space .cookies .accept-cookies {/* -This is only displayed in desktop mode- */
+  .checkbox-cookies, .message-cookies, .bar-cookies, .close-cookies {/* -This is only displayed in desktop mode- */
     display: none;
   }
 
   /* ------------------------------------------------------------------- */
   /* ---------- Specifications for Desktop / Landscape Tablet ---------- */
   /* ------------------------------------------------------------------- */
-  @media screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     /* ----- Background image: astronaut | Desktop / Landscape Tablet ----- */
     /* -------------------------------------------------------------------- */
     .astronaut { 
       background-position: 50% 48%;
       background-repeat: no-repeat;
+      height: 100vh;
+      width: 100vw;
     } 
     /* ----- Navigation | Background image: astronaut | Desktop / Landscape Tablet ----- */
 
@@ -326,7 +310,6 @@
     .astronaut .verticalarrow {
       font-size: 7vw;
     }
-
     /* ----- Background image: space | Desktop / Landscape Tablet ----- */
     /* ---------------------------------------------------------------- */
     .space {
@@ -335,119 +318,94 @@
       background-repeat: no-repeat;
       background-attachment: scroll;
       position: absolute;
-      min-height: 100vh;
-      min-width: 100vw;
+      height: 100vh;
+      width: 100vw;
     } 
     /* ----- Flexbox containing Flexbox Left and Flexbox Right | Background image: space | Desktop / Landscape Tablet ----- */
     .space .text {
       display: flex;
+      position: absolute;
       flex-direction: row;
-      border: 1px solid red;
       color: whitesmoke;
-      height: 80vh;
-      width: 90.09vw;
-      margin-top: 9.09vh;
-      margin-left: 4.45vw;
-      margin-right: 4vw;
+      height: 80%;
+      width: 90%;
+      margin-top: 5%;
+      margin-bottom: 15%;
+      margin-left: 5%;
+      margin-right: 5%;
       font-family: 'Rubik', sans-serif;
     }
     /* ----- Flexbox Left | Background image: space | Desktop / Landscape Tablet ----- */
-    .space .flexboxleft { 
+    .space .text .flexboxleft { 
       display: flex;
       flex-direction: column;
-      float: right;
+      float: left;
       order: 1;
-      width: 36.36vw;
-      margin-right: 18.18vw;
+      top: 0;
+      left: 0;
       height: 100%; 
-      border: 2px solid blueviolet;
-      position: relative;
+      width: 40%;
+      position: absolute;
     }
     /* ----- Flexbox Right | Background image: space | Desktop / Landscape Tablet ----- */
-    .space .flexboxright {
+    .space .text .flexboxright {
       display: flex;
       flex-direction: column;
       float: right;
-      width: 36.36vw;
-      height: 100%;
-      position: relative;
+      top:0;
+      right: 0;
+      height: 100%; 
+      width: 40%;
+      position: absolute;
       order: 2;
-      border: 2px solid green;
     }
-    .space .text .flexboxleft .logo-text {
-      border: 1px solid red;
+    .text .flexboxleft .logo-text {
       z-index: 0;
-      margin-top: 0vh;
-      height: 20vh;
+      top: 0%;
+      left: 0%;
+      height: 12%;
       width: 100%;
       position: relative;
       z-index: 0;
     }
-    .space .text .flexboxleft .logo-text .space-logo-text {
-      border: 1px solid red;
-      font-size: 6.8vw;
-      margin-left: 0%
+    .flexboxleft .logo-text .space-logo-text {
+      font-size: 7vw;
+      top: 0;
+      left: 0;
+      position: relative;
     }
-    .space .text .flexboxleft .logo-text .ventures-logo-text {
-      border: 1px solid red;
+    .flexboxleft .logo-text .ventures-logo-text {
       font-family: 'Times New Roman', Times, serif;
-      font-size: 9vw;
-      margin-left: 0%;
-      top: 1.5vw;
+      font-size: 9.4vw;
+      left: 0%;
+      position: relative;
     }
-    /* --
-  .space .text .logo-text .space-logo-text {
-    border: 1px solid red;
-    font-family: 'Rubik', sans-serif;
-    font-size: 12vw;
-    font-weight: bold;
-    color: white;
-    margin-left: 2vw;
-    position: relative;
-    z-index: 2;
-  }
-  .space .text .logo-text .ventures-logo-text {
-    border: 1px solid red;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 16vw;
-    font-weight: bold;
-    color: gray;
-    position: relative;
-    margin-left: 13vw;
-    z-index: 1;
-    --*/
-
     /* ----- Heading | Background image: space | Desktop / Landscape Tablet ----- */
-    .space .text .flexboxleft .heading-text {
-      border: 1px solid red;
-      font-size: 2vw;
-      margin-top: 4vh;
+    .flexboxleft .heading-text {
+      font-size: 2.2vw;
+      margin-top: 18%;
+      position: relative;
     }
     /* ----- Text (Section before quote) | Background image: space | Desktop / Landscape Tablet ----- */
-    .space .text .flexboxleft .p1-text {
-      border: 1px solid red;
-      margin-top: 1vh;
-      line-height: 2.5vh;
-      font-size: 1.1vw
+    .flexboxleft .p1-text {
+      margin-top: 4%;
+      line-height: clamp(2.2vh, 2.6vh, 3vh);
+      font-size: 1.1vw;
     }
-    .space .text .flexboxleft .p2-text {
-      border: 1px solid red;
-      line-height: 2.5vh;
-      margin-top: 1vh;
-      font-size: 1.1vw
+    .flexboxleft .p2-text {
+      font-size: 1.1vw;
+      line-height: clamp(2.2vh, 2.6vh, 3vh);
+      margin-top: 3%;
     }
     /* ----- Universal quote | Background image: space | Desktop / Landscape Tablet ----- */
-    .space .text .flexboxleft .quote-text {
-      border: 1px solid red;
+    .flexboxleft .quote-text {
       font-style: italic;
-      font-size: 1.7vw;
-      line-height: 3vh;
+      line-height: clamp(2rem, 3rem, 4rem);
+      font-size: 1.8vw;
       font-weight: lighter;
-      height: 10vh;
-      margin-top: 6vh;
-      margin-bottom: 12vh;
-      margin-left: 3vw;
-      margin-right: 2vw;
+      margin-top: 12%;
+      margin-right: 0%;
+      margin-left: 6%;
       quotes: auto;
     }
     /* ----- Quotation marks | Universal quote | Background image: space | Desktop / Landscape Tablet ----- */
@@ -457,49 +415,17 @@
     .quote-text::after {
       content: close-quote;
     }
-    /*--
-  .space .text .p1-text {
-    border: 1px solid red;
-    color: white;
-    margin-top: 2vh;
-    position: relative;
-  }
-  .space .text .p2-text {
-    border: 1px solid red;
-    position: relative;
-    margin-top: 1vh;
-  }
-  .space .text .quote-text {
-    border: 1px solid red;
-    font-style: italic;
-    font-size: 3.8vw;
-    font-weight: lighter;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
-    margin-left: 6vw;
-    margin-right: 2vw;
-    quotes: auto;
-  }
-  .quote-text::before {
-    content: open-quote;
-  }
-  .quote-text::after {
-    content: close-quote;
-  }
-    --*/
-
     /* ----- Desktop quote | Background image: space | Desktop / Landscape Tablet ----- */
-    .space .text .flexboxright .desktop-quote-text { /* -This quote is only displayed in desktop mode- */
+    .flexboxright .desktop-quote-text { /* -This quote is only displayed in desktop mode- */
       font-style: italic;
-      font-size: 2.4vw;
+      font-size: 2.8vw;
       font-weight: 400;
-      border: 1px solid red;
       display: block;
-      width: 23vw;
-      margin-top: 7.0vh;
-      margin-bottom: 7.0vh;
+      width: 75%;
+      margin-top: 10%;
+      margin-bottom: 10%;
       position: relative;
-      line-height: 4.4vh;
+      line-height: clamp(4vh, 5vh, 6vh);
       opacity: 99%;
       background: -webkit-repeating-linear-gradient(95deg, rgb(121, 45, 97), rgb(121, 105, 113)
       69%);
@@ -507,47 +433,57 @@
       -webkit-text-fill-color: transparent;
     }
     /* ----- Text (Section after quote) | Background image: space | Desktop / Landscape Tablet ----- */
-    .space .text .flexboxright .p3-text {
-      border: 1px solid red;
+    .flexboxright .p3-text {
+      line-height: clamp(2.2vh, 2.6vh, 3vh);
       font-size: 1.1vw;
-      line-height: 2.5vh;
+      position: relative;
+      border: 2px red;
+
+    }
+    .flexboxright .p4-text {
+      line-height: clamp(2.2vh, 2.6vh, 3vh);
+      font-size: 1.1vw;
+      position: relative;
+      border: 2px red;
+
+    }
+    .flexboxright .major-tom {
+      display: block;
+      background-image: url("/images/major_tom.jpg");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      text-align: center;
+      border: 2px red;
+      width: 100px;
+      height: 300px;
+      right: 1px;
+
+    }
+    .flexboxright .p5-text {
+      line-height: clamp(3vh, 4vh, 5vh);
+      font-size: 1.1vw;
       position: relative;
     }
-    .space .text .flexboxright .p4-text {
-      border: 1px solid red;
+    .flexboxright .p6-text {
+      line-height: clamp(3vh, 4vh, 5vh);
       font-size: 1.1vw;
-      line-height: 2.5vh;
       position: relative;
     }
-    .space .text .flexboxright .p5-text {
-      border: 1px solid red;
+    .flexboxright .p7-text {
+      line-height: clamp(3vh, 4vh, 5vh);
       font-size: 1.1vw;
-      margin-top: 0vh;
-      position: relative;
-    }
-    .space .text .flexboxright .p6-text {
-      border: 1px solid red;
-      font-size: 1.1vw;
-      margin-top: 0vh;
-      position: relative;
-    }
-    .space .text .flexboxright .p7-text {
-      border: 1px solid red;
-      font-size: 1.1vw;
-      margin-top: 0vh;
       position: relative;
     }
     /* ----- Link | Background image: space | Desktop / Landscape Tablet ----- */
-    .space .text .flexboxright .link-text {
+    .flexboxright .link-text {
       color: rgb(206, 50, 188);
       text-decoration: underline;
+      line-height: clamp(2vh, 2.2vh, 2.4vh);
       font-size: 1.1vw;
-      margin-top: 0.0vh;
-      border: 1px solid red;
       position: relative;
     }
     /* ----- Arrow | Link | Background image: space | Desktop / Landscape Tablet ----- */
-    .space .text .flexboxright .link-text .arrow-link-text {
+    .flexboxright .link-text .arrow-link-text {
       text-decoration: none;
       display: inline-block;
       margin-left: 0.5%;
@@ -572,44 +508,48 @@
     }
     /* ----- Cookies | Background image: space | Desktop / Landscape Tablet ----- */
     .space .bar-cookies {/* -This is only displayed in desktop mode- */
-      width: 100vw;
-      background-color: rgb(21, 21, 80);
-      height: 9%;
+      width: 100%;
+      background-color: rgb(1, 1, 39);
+      height: 7%;
       bottom: 0%;
       right: 0%; 
       left: 0%;
-      border: 1px solid red;
       position: fixed;
       display: block;
     }
     /* ----- Text | Cookies | Background image: space | Desktop / Landscape Tablet ----- */
     .bar-cookies .message-cookies {/* -This is only displayed in desktop mode- */
       font-family: 'Rubik', sans-serif;
-      left: 3%;
-      top: 40%;
-      border: 1px solid red;
+      font-size: 1.1vw;
+      font-weight: bold;
+      left: 2%;
+      top: 34%;
       position: relative;
-      color: white;
+      color: rgb(206, 50, 188);;
       display: inline-block;
+      line-height: 100%;
     }
     /* ----- Button | Cookies | Background image: space | Desktop / Landscape Tablet ----- */
     #checkbox-cookies {/* -This is only displayed in desktop mode- */
       display: none;
+    } 
+    input[id='checkbox-cookies']:checked ~ .bar-cookies {
+      transform: translateY(100%);
+      transition-duration: 1s;
     }
     .bar-cookies .close-cookies {/* -This is only displayed in desktop mode- */
-      top: 40%;
-      left: 43%;
-      right: 10%;
-      height: 30%;
-      width: 15%;
-      border: 1px solid red;
-      position: relative;
+      top: 20%;
+      right: 2%;
+      padding: 10px;
+      position: absolute;
       color: white;
       font-family: 'Rubik', sans-serif;
       display: inline-block;
       text-transform: uppercase;
-      background-color: blue;
-
+      font-weight: 700;
+      font-size: 90%;
+      background-color: rgb(26, 26, 184);
+      text-align: center;
     }
   }
 
